@@ -1,0 +1,355 @@
+=============
+sub_401120 : 0x401120
+basic block list : [4198688, 4198716, 4198726, 4198740, 4198772, 4198751, 4198789, 4198756, 4198804, 4198766]
+-------------------
+basic block #0x401120, 0x1c
+bytes : b'U\x8b\xec\x83\xec\x08\xa1\x040@\x003\xc5\x89E\xfc\xc7E\xf8\x02\x00\x00\x00\xe8T\xff\xff\xff'
+### Instructions ###
+401120: push    ebp
+401121: mov     ebp, esp
+401123: sub     esp, 8
+401126: mov     eax, dword ptr [0x403004]
+40112b: xor     eax, ebp
+40112d: mov     dword ptr [ebp - 4], eax
+401130: mov     dword ptr [ebp - 8], 2
+401137: call    0x401090
+### VEX IR ###
+IRSB {
+   t0:Ity_I32 t1:Ity_I32 t2:Ity_I32 t3:Ity_I32 t4:Ity_I32 t5:Ity_I32 t6:Ity_I32 t7:Ity_I32 t8:Ity_I32 t9:Ity_I32 t10:Ity_I32 t11:Ity_I32 t12:Ity_I32 t13:Ity_I32 t14:Ity_I32 t15:Ity_I32 t16:Ity_I32 t17:Ity_I32 t18:Ity_I32 t19:Ity_I32 t20:Ity_I32 t21:Ity_I32 t22:Ity_I32 t23:Ity_I32  
+
+   00 | ------ IMark(0x401120, 1, 0) ------
+   01 | t0 = GET:I32(ebp)
+   02 | t13 = GET:I32(esp)
+   03 | t12 = Sub32(t13,0x00000004)
+   04 | PUT(esp) = t12
+   05 | STle(t12) = t0
+   06 | ------ IMark(0x401121, 2, 0) ------
+   07 | PUT(ebp) = t12
+   08 | ------ IMark(0x401123, 3, 0) ------
+   09 | t2 = Sub32(t12,0x00000008)
+   10 | PUT(esp) = t2
+   11 | PUT(eip) = 0x00401126
+   12 | ------ IMark(0x401126, 5, 0) ------
+   13 | t15 = LDle:I32(0x00403004)
+   14 | ------ IMark(0x40112b, 2, 0) ------
+   15 | t6 = Xor32(t15,t12)
+   16 | PUT(cc_op) = 0x0000000f
+   17 | PUT(cc_dep1) = t6
+   18 | PUT(cc_dep2) = 0x00000000
+   19 | PUT(cc_ndep) = 0x00000000
+   20 | PUT(eax) = t6
+   21 | PUT(eip) = 0x0040112d
+   22 | ------ IMark(0x40112d, 3, 0) ------
+   23 | t16 = Add32(t12,0xfffffffc)
+   24 | STle(t16) = t6
+   25 | PUT(eip) = 0x00401130
+   26 | ------ IMark(0x401130, 7, 0) ------
+   27 | t19 = Add32(t12,0xfffffff8)
+   28 | STle(t19) = 0x00000002
+   29 | PUT(eip) = 0x00401137
+   30 | ------ IMark(0x401137, 5, 0) ------
+   31 | t21 = Sub32(t2,0x00000004)
+   32 | PUT(esp) = t21
+   33 | STle(t21) = 0x0040113c
+   NEXT: PUT(eip) = 0x00401090; Ijk_Call
+}
+-------------------
+basic block #0x40113c, 0xa
+bytes : b'h@!@\x00\xe8\xda\xfe\xff\xff'
+### Instructions ###
+40113c: push    0x402140
+401141: call    0x401020
+### VEX IR ###
+IRSB {
+   t0:Ity_I32 t1:Ity_I32 t2:Ity_I32 t3:Ity_I32 t4:Ity_I32 t5:Ity_I32 t6:Ity_I32 t7:Ity_I32
+
+   00 | ------ IMark(0x40113c, 5, 0) ------
+   01 | t4 = GET:I32(esp)
+   02 | t3 = Sub32(t4,0x00000004)
+   03 | PUT(esp) = t3
+   04 | STle(t3) = 0x00402140
+   05 | PUT(eip) = 0x00401141
+   06 | ------ IMark(0x401141, 5, 0) ------
+   07 | t5 = Sub32(t3,0x00000004)
+   08 | PUT(esp) = t5
+   09 | STle(t5) = 0x00401146
+   NEXT: PUT(eip) = 0x00401020; Ijk_Call
+}
+-------------------
+basic block #0x401146, 0xe
+bytes : b'\x8dE\xf8Ph0!@\x00\xe8\xfc\xfe\xff\xff'
+### Instructions ###
+401146: lea     eax, [ebp - 8]
+401149: push    eax
+40114a: push    0x402130
+40114f: call    0x401050
+### VEX IR ###
+IRSB {
+   t0:Ity_I32 t1:Ity_I32 t2:Ity_I32 t3:Ity_I32 t4:Ity_I32 t5:Ity_I32 t6:Ity_I32 t7:Ity_I32 t8:Ity_I32 t9:Ity_I32 t10:Ity_I32 t11:Ity_I32 t12:Ity_I32 t13:Ity_I32 t14:Ity_I32
+
+   00 | ------ IMark(0x401146, 3, 0) ------
+   01 | t7 = GET:I32(ebp)
+   02 | t6 = Add32(t7,0xfffffff8)
+   03 | PUT(eax) = t6
+   04 | PUT(eip) = 0x00401149
+   05 | ------ IMark(0x401149, 1, 0) ------
+   06 | t9 = GET:I32(esp)
+   07 | t8 = Sub32(t9,0x00000004)
+   08 | PUT(esp) = t8
+   09 | STle(t8) = t6
+   10 | PUT(eip) = 0x0040114a
+   11 | ------ IMark(0x40114a, 5, 0) ------
+   12 | t10 = Sub32(t8,0x00000004)
+   13 | PUT(esp) = t10
+   14 | STle(t10) = 0x00402130
+   15 | PUT(eip) = 0x0040114f
+   16 | ------ IMark(0x40114f, 5, 0) ------
+   17 | t12 = Sub32(t10,0x00000004)
+   18 | PUT(esp) = t12
+   19 | STle(t12) = 0x00401154
+   NEXT: PUT(eip) = 0x00401050; Ijk_Call
+}
+-------------------
+basic block #0x401154, 0xb
+bytes : b'\x8bE\xf8\x83\xc4\x0c\x83\xf8\n~\x15'
+### Instructions ###
+401154: mov     eax, dword ptr [ebp - 8]
+401157: add     esp, 0xc
+40115a: cmp     eax, 0xa
+40115d: jle     0x401174
+### VEX IR ###
+IRSB {
+   t0:Ity_I32 t1:Ity_I32 t2:Ity_I32 t3:Ity_I32 t4:Ity_I32 t5:Ity_I32 t6:Ity_I32 t7:Ity_I32 t8:Ity_I32 t9:Ity_I32 t10:Ity_I1 t11:Ity_I32 t12:Ity_I32 t13:Ity_I32 t14:Ity_I32 t15:Ity_I32 t16:Ity_I32 t17:Ity_I32 t18:Ity_I1 t19:Ity_I1
+
+   00 | ------ IMark(0x401154, 3, 0) ------
+   01 | t8 = GET:I32(ebp)
+   02 | t7 = Add32(t8,0xfffffff8)
+   03 | t9 = LDle:I32(t7)
+   04 | PUT(eax) = t9
+   05 | ------ IMark(0x401157, 3, 0) ------
+   06 | t3 = GET:I32(esp)
+   07 | t1 = Add32(t3,0x0000000c)
+   08 | PUT(esp) = t1
+   09 | ------ IMark(0x40115a, 3, 0) ------
+   10 | PUT(cc_op) = 0x00000006
+   11 | PUT(cc_dep1) = t9
+   12 | PUT(cc_dep2) = 0x0000000a
+   13 | PUT(cc_ndep) = 0x00000000
+   14 | PUT(eip) = 0x0040115d
+   15 | ------ IMark(0x40115d, 2, 0) ------
+   16 | t18 = CmpLE32S(t9,0x0000000a)
+   17 | t17 = 1Uto32(t18)
+   18 | t15 = t17
+   19 | t19 = 32to1(t15)
+   20 | t10 = t19
+   21 | if (t10) { PUT(eip) = 0x401174; Ijk_Boring }
+   NEXT: PUT(eip) = 0x0040115f; Ijk_Boring
+}
+-------------------
+basic block #0x401174, 0x11
+bytes : b'j\x03Pj\x01j\x00hT!@\x00\xe8\x9b\xfe\xff\xff'
+### Instructions ###
+401174: push    3
+401176: push    eax
+401177: push    1
+401179: push    0
+40117b: push    0x402154
+401180: call    0x401020
+### VEX IR ###
+IRSB {
+   t0:Ity_I32 t1:Ity_I32 t2:Ity_I32 t3:Ity_I32 t4:Ity_I32 t5:Ity_I32 t6:Ity_I32 t7:Ity_I32 t8:Ity_I32 t9:Ity_I32 t10:Ity_I32 t11:Ity_I32 t12:Ity_I32 t13:Ity_I32 t14:Ity_I32 t15:Ity_I32 t16:Ity_I32 t17:Ity_I32 t18:Ity_I32 t19:Ity_I32 t20:Ity_I32 t21:Ity_I32 t22:Ity_I32 t23:Ity_I32  
+
+   00 | ------ IMark(0x401174, 2, 0) ------
+   01 | t12 = GET:I32(esp)
+   02 | t11 = Sub32(t12,0x00000004)
+   03 | PUT(esp) = t11
+   04 | STle(t11) = 0x00000003
+   05 | PUT(eip) = 0x00401176
+   06 | ------ IMark(0x401176, 1, 0) ------
+   07 | t2 = GET:I32(eax)
+   08 | t13 = Sub32(t11,0x00000004)
+   09 | PUT(esp) = t13
+   10 | STle(t13) = t2
+   11 | PUT(eip) = 0x00401177
+   12 | ------ IMark(0x401177, 2, 0) ------
+   13 | t15 = Sub32(t13,0x00000004)
+   14 | PUT(esp) = t15
+   15 | STle(t15) = 0x00000001
+   16 | PUT(eip) = 0x00401179
+   17 | ------ IMark(0x401179, 2, 0) ------
+   18 | t17 = Sub32(t15,0x00000004)
+   19 | PUT(esp) = t17
+   20 | STle(t17) = 0x00000000
+   21 | PUT(eip) = 0x0040117b
+   22 | ------ IMark(0x40117b, 5, 0) ------
+   23 | t19 = Sub32(t17,0x00000004)
+   24 | PUT(esp) = t19
+   25 | STle(t19) = 0x00402154
+   26 | PUT(eip) = 0x00401180
+   27 | ------ IMark(0x401180, 5, 0) ------
+   28 | t21 = Sub32(t19,0x00000004)
+   29 | PUT(esp) = t21
+   30 | STle(t21) = 0x00401185
+   NEXT: PUT(eip) = 0x00401020; Ijk_Call
+}
+-------------------
+basic block #0x40115f, 0x5
+bytes : b'\xe8,\xff\xff\xff'
+### Instructions ###
+40115f: call    0x401090
+### VEX IR ###
+IRSB {
+   t0:Ity_I32 t1:Ity_I32 t2:Ity_I32 t3:Ity_I32
+
+   00 | ------ IMark(0x40115f, 5, 0) ------
+   01 | t2 = GET:I32(esp)
+   02 | t1 = Sub32(t2,0x00000004)
+   03 | PUT(esp) = t1
+   04 | STle(t1) = 0x00401164
+   NEXT: PUT(eip) = 0x00401090; Ijk_Call
+}
+-------------------
+basic block #0x401185, 0xf
+bytes : b'\x8bM\xfc\x83\xc4\x143\xcd3\xc0\xe8\x04\x00\x00\x00'
+### Instructions ###
+401185: mov     ecx, dword ptr [ebp - 4]
+401188: add     esp, 0x14
+40118b: xor     ecx, ebp
+40118d: xor     eax, eax
+40118f: call    0x401198
+### VEX IR ###
+IRSB {
+   t0:Ity_I32 t1:Ity_I32 t2:Ity_I32 t3:Ity_I32 t4:Ity_I32 t5:Ity_I32 t6:Ity_I32 t7:Ity_I32 t8:Ity_I32 t9:Ity_I32 t10:Ity_I32 t11:Ity_I32 t12:Ity_I32 t13:Ity_I32 t14:Ity_I32 t15:Ity_I32 t16:Ity_I32
+
+   00 | ------ IMark(0x401185, 3, 0) ------
+   01 | t12 = GET:I32(ebp)
+   02 | t11 = Add32(t12,0xfffffffc)
+   03 | t13 = LDle:I32(t11)
+   04 | ------ IMark(0x401188, 3, 0) ------
+   05 | t3 = GET:I32(esp)
+   06 | t1 = Add32(t3,0x00000014)
+   07 | ------ IMark(0x40118b, 2, 0) ------
+   08 | t4 = Xor32(t13,t12)
+   09 | PUT(ecx) = t4
+   10 | ------ IMark(0x40118d, 2, 0) ------
+   11 | PUT(cc_op) = 0x0000000f
+   12 | PUT(cc_dep1) = 0x00000000
+   13 | PUT(cc_dep2) = 0x00000000
+   14 | PUT(cc_ndep) = 0x00000000
+   15 | PUT(eax) = 0x00000000
+   16 | PUT(eip) = 0x0040118f
+   17 | ------ IMark(0x40118f, 5, 0) ------
+   18 | t14 = Sub32(t1,0x00000004)
+   19 | PUT(esp) = t14
+   20 | STle(t14) = 0x00401194
+   NEXT: PUT(eip) = 0x00401198; Ijk_Call
+}
+-------------------
+basic block #0x401164, 0xa
+bytes : b'hL!@\x00\xe8\xb2\xfe\xff\xff'
+### Instructions ###
+401164: push    0x40214c
+401169: call    0x401020
+### VEX IR ###
+IRSB {
+   t0:Ity_I32 t1:Ity_I32 t2:Ity_I32 t3:Ity_I32 t4:Ity_I32 t5:Ity_I32 t6:Ity_I32 t7:Ity_I32
+
+   00 | ------ IMark(0x401164, 5, 0) ------
+   01 | t4 = GET:I32(esp)
+   02 | t3 = Sub32(t4,0x00000004)
+   03 | PUT(esp) = t3
+   04 | STle(t3) = 0x0040214c
+   05 | PUT(eip) = 0x00401169
+   06 | ------ IMark(0x401169, 5, 0) ------
+   07 | t5 = Sub32(t3,0x00000004)
+   08 | PUT(esp) = t5
+   09 | STle(t5) = 0x0040116e
+   NEXT: PUT(eip) = 0x00401020; Ijk_Call
+}
+-------------------
+basic block #0x401194, 0x4
+bytes : b'\x8b\xe5]\xc3'
+### Instructions ###
+401194: mov     esp, ebp
+401196: pop     ebp
+401197: ret
+### VEX IR ###
+IRSB {
+   t0:Ity_I32 t1:Ity_I32 t2:Ity_I32 t3:Ity_I32 t4:Ity_I32 t5:Ity_I32 t6:Ity_I32 t7:Ity_I32
+
+   00 | ------ IMark(0x401194, 2, 0) ------
+   01 | t4 = GET:I32(ebp)
+   02 | PUT(esp) = t4
+   03 | PUT(eip) = 0x00401196
+   04 | ------ IMark(0x401196, 1, 0) ------
+   05 | t0 = LDle:I32(t4)
+   06 | t5 = Add32(t4,0x00000004)
+   07 | PUT(esp) = t5
+   08 | PUT(ebp) = t0
+   09 | PUT(eip) = 0x00401197
+   10 | ------ IMark(0x401197, 1, 0) ------
+   11 | t3 = LDle:I32(t5)
+   12 | t6 = Add32(t5,0x00000004)
+   13 | PUT(esp) = t6
+   NEXT: PUT(eip) = t3; Ijk_Ret
+}
+-------------------
+basic block #0x40116e, 0x17
+bytes : b'\x8bE\xf8\x83\xc4\x04j\x03Pj\x01j\x00hT!@\x00\xe8\x9b\xfe\xff\xff'
+### Instructions ###
+40116e: mov     eax, dword ptr [ebp - 8]
+401171: add     esp, 4
+401174: push    3
+401176: push    eax
+401177: push    1
+401179: push    0
+40117b: push    0x402154
+401180: call    0x401020
+### VEX IR ###
+IRSB {
+   t0:Ity_I32 t1:Ity_I32 t2:Ity_I32 t3:Ity_I32 t4:Ity_I32 t5:Ity_I32 t6:Ity_I32 t7:Ity_I32 t8:Ity_I32 t9:Ity_I32 t10:Ity_I32 t11:Ity_I32 t12:Ity_I32 t13:Ity_I32 t14:Ity_I32 t15:Ity_I32 t16:Ity_I32 t17:Ity_I32 t18:Ity_I32 t19:Ity_I32 t20:Ity_I32 t21:Ity_I32 t22:Ity_I32 t23:Ity_I32 t24:Ity_I32 t25:Ity_I32 t26:Ity_I32 t27:Ity_I32 t28:Ity_I32 t29:Ity_I32 t30:Ity_I32
+
+   00 | ------ IMark(0x40116e, 3, 0) ------
+   01 | t16 = GET:I32(ebp)
+   02 | t15 = Add32(t16,0xfffffff8)
+   03 | t17 = LDle:I32(t15)
+   04 | PUT(eax) = t17
+   05 | ------ IMark(0x401171, 3, 0) ------
+   06 | t3 = GET:I32(esp)
+   07 | t1 = Add32(t3,0x00000004)
+   08 | PUT(cc_op) = 0x00000003
+   09 | PUT(cc_dep1) = t3
+   10 | PUT(cc_dep2) = 0x00000004
+   11 | PUT(cc_ndep) = 0x00000000
+   12 | PUT(eip) = 0x00401174
+   13 | ------ IMark(0x401174, 2, 0) ------
+   14 | t18 = Sub32(t1,0x00000004)
+   15 | PUT(esp) = t18
+   16 | STle(t18) = 0x00000003
+   17 | PUT(eip) = 0x00401176
+   18 | ------ IMark(0x401176, 1, 0) ------
+   19 | t20 = Sub32(t18,0x00000004)
+   20 | PUT(esp) = t20
+   21 | STle(t20) = t17
+   22 | PUT(eip) = 0x00401177
+   23 | ------ IMark(0x401177, 2, 0) ------
+   24 | t22 = Sub32(t20,0x00000004)
+   25 | PUT(esp) = t22
+   26 | STle(t22) = 0x00000001
+   27 | PUT(eip) = 0x00401179
+   28 | ------ IMark(0x401179, 2, 0) ------
+   29 | t24 = Sub32(t22,0x00000004)
+   30 | PUT(esp) = t24
+   31 | STle(t24) = 0x00000000
+   32 | PUT(eip) = 0x0040117b
+   33 | ------ IMark(0x40117b, 5, 0) ------
+   34 | t26 = Sub32(t24,0x00000004)
+   35 | PUT(esp) = t26
+   36 | STle(t26) = 0x00402154
+   37 | PUT(eip) = 0x00401180
+   38 | ------ IMark(0x401180, 5, 0) ------
+   39 | t28 = Sub32(t26,0x00000004)
+   40 | PUT(esp) = t28
+   41 | STle(t28) = 0x00401185
+   NEXT: PUT(eip) = 0x00401020; Ijk_Call
+}

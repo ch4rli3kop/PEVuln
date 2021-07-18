@@ -1,0 +1,18 @@
+1. 한번 슥 -> 각 스택 변수들 type 체크하기
+2. 배열 변수 체크하기
+
+TODO : stash 체크
+
+[ addr : 0x4001020, 
+  ebp-0x14 : [ 
+                   type : uint32_t, 
+                   regs : [eax, ebx], 
+                   range : [0x0, 0x14]
+                  ] 
+]
+
+<class 'angr.sim_variable.SimStackVariable'>
+['__add__', '__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__slots__', '__str__', '__sub__', '__subclasshook__', '_hash', 'addr', 'base', 'base_addr', 'bits', 'candidate_names', 'category', 'copy', 'ident', 'name', 'offset', 'region', 'renamed', 'size']
+
+<class 'angr.sim_variable.SimRegisterVariable'>
+['__add__', '__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__slots__', '__str__', '__sub__', '__subclasshook__', '_hash', 'bits', 'candidate_names', 'category', 'copy', 'ident', 'name', 'reg', 'region', 'renamed', 'size']

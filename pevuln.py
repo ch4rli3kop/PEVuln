@@ -193,18 +193,18 @@ class PEVuln(object):
 
         #return func
 
-    def search_func_len(self, addr):
-        '''
-        '''
-        insn_len = 0
-        while True:
-            code = self.code[addr:addr+0x100]
-            for insn in self.md.disasm(code, self.base + addr):
-                insn_len += 1
-                print("%x:\t%s\t%s" %(insn.address, insn.mnemonic, insn.op_str))
-                if insn.mnemonic in END:
-                    return insn_len
-            addr += 0x100
+    # def search_func_len(self, addr):
+    #     '''
+    #     '''
+    #     insn_len = 0
+    #     while True:
+    #         code = self.code[addr:addr+0x100]
+    #         for insn in self.md.disasm(code, self.base + addr):
+    #             insn_len += 1
+    #             print("%x:\t%s\t%s" %(insn.address, insn.mnemonic, insn.op_str))
+    #             if insn.mnemonic in END:
+    #                 return insn_len
+    #         addr += 0x100
 
     def get_functions(self, method='recursive'):
         self.functions = []                      # save function start address

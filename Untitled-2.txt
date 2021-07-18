@@ -1,0 +1,43 @@
+0x804921a:      endbr32
+0x804921e:      push    ebp
+0x804921f:      mov     ebp, esp
+0x8049221:      push    ebx
+0x8049222:      sub     esp, 0x24
+0x8049225:      call    0x804929e
+None
+0x804922a:      add     eax, 0x2dd6
+0x804922f:      cmp     dword ptr [ebp + 8], 0x13
+0x8049233:      jg      0x804924f
+None
+0x8049235:      lea     edx, [ebp - 0x20]
+0x8049238:      mov     eax, dword ptr [ebp + 8]
+0x804923b:      add     eax, edx
+0x804923d:      mov     byte ptr [eax], 0
+0x8049240:      mov     dword ptr [ebp - 0xc], 0xa
+0x8049247:      mov     eax, dword ptr [ebp + 8]
+0x804924a:      mov     dword ptr [ebp - 0x10], eax
+0x804924d:      jmp     0x8049271
+None
+0x804924f:      sub     esp, 0xc
+0x8049252:      lea     edx, [eax - 0x1ff0]
+0x8049258:      push    edx
+0x8049259:      mov     ebx, eax
+0x804925b:      call    0x8049060
+None
+0x8049271:      mov     edx, dword ptr [ebp - 0xc]
+0x8049274:      mov     eax, dword ptr [ebp - 0x10]
+0x8049277:      add     eax, edx
+0x8049279:      mov     ebx, dword ptr [ebp - 4]
+0x804927c:      leave
+0x804927d:      ret
+None
+0x8049260:      add     esp, 0x10
+0x8049263:      mov     dword ptr [ebp - 0xc], 0x1e
+0x804926a:      mov     dword ptr [ebp - 0x10], 1
+0x8049271:      mov     edx, dword ptr [ebp - 0xc]
+0x8049274:      mov     eax, dword ptr [ebp - 0x10]
+0x8049277:      add     eax, edx
+0x8049279:      mov     ebx, dword ptr [ebp - 4]
+0x804927c:      leave
+0x804927d:      ret
+None

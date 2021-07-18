@@ -1,0 +1,8 @@
+State Addr : 0x401195
+Array : {
+	offset : -0x2ad0
+	variable_type : byte *
+Index : {
+	min : 0x0
+	max : 0xfffffffc
+}}
