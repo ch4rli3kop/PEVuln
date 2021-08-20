@@ -1,2 +1,2 @@
 # PEVuln
-Static Binary Analyzer &amp; Vulnerability Detector
+Static Binary Analyzer &amp; Array Out-Of-Bound Vulnerability Detector
